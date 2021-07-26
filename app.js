@@ -6,8 +6,8 @@ const cron = require('node-cron');
 const port = process.env.PORT;
 const sendMail = require('./mail.js');
 
-cron.schedule('*/1 * * * *', () => {
-  console.log("Task is running every minute");
+cron.schedule('*/15 * * * *', () => {
+  console.log("Task is running every 15 minute");
   sendMail("harikanth94@gmail.com");
 });
 
